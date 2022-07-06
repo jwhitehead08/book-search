@@ -48,8 +48,8 @@ const resolvers = {
         return updateBook;
       }
       throw new AuthenticationError("Not logged in!");
-    }
-  },
+    },
+
   removeBook: async (parent,{bookId},context) => {
     if (context.user){
       const deleteBook = await User.findByIdAndUpdate(
@@ -61,7 +61,7 @@ const resolvers = {
     }
     throw new AuthenticationError("Not logged in!");
   }
-
+  }
 };
 
 module.exports = resolvers;

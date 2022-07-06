@@ -24,8 +24,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-// comment this out?
-app.use(routes);
 
 // need this? 
 // app.get('*', (req, res) => {
